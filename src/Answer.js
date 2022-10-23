@@ -8,7 +8,7 @@ class Home extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="virbe-plugin-expanded active">
+        <div className="virbe-plugin-expanded active move-right">
           <div className="player-container">
             <div className="canvas-container">
               <img src="./answer-bot.png" alt="answer-bot" />
@@ -49,7 +49,7 @@ class Home extends React.Component {
                     style={{ borderWidth: 0, backgroundColor: "#d2eaff" }}
                   >
                     <span className="virbe-plugin-1-MuiIconButton-label">
-                      <svg
+                      {/* <svg
                         width="12"
                         height="20"
                         viewBox="0 0 12 20"
@@ -60,7 +60,7 @@ class Home extends React.Component {
                           d="M11.25 9C11.4312 9.00001 11.6063 9.06564 11.7429 9.18477C11.8795 9.30389 11.9684 9.46845 11.993 9.648L12 9.75V10.25C12.0002 11.9536 11.3561 13.5942 10.1971 14.8428C9.03814 16.0914 7.44989 16.8556 5.751 16.982L5.75 19.25C5.74994 19.44 5.67776 19.6229 5.54803 19.7618C5.4183 19.9006 5.2407 19.9851 5.05112 19.998C4.86154 20.011 4.67411 19.9515 4.5267 19.8316C4.37929 19.7117 4.2829 19.5402 4.257 19.352L4.25 19.25V16.982C2.59151 16.8588 1.03687 16.1278 -0.115789 14.929C-1.26845 13.7302 -1.93799 12.148 -1.996 10.486L-2 10.25V9.75C-1.99994 9.55998 -1.92776 9.37706 -1.79803 9.23821C-1.6683 9.09936 -1.4907 9.01493 -1.30112 9.00197C-1.11154 8.98902 -0.924108 9.04852 -0.776701 9.16843C-0.629294 9.28835 -0.532901 9.45975 -0.507 9.648L-0.5 9.75V10.25C-0.500115 11.6051 0.0237202 12.9077 0.961937 13.8854C1.90015 14.8632 3.18008 15.4402 4.534 15.496L4.75 15.5H5.25C6.60507 15.5001 7.9077 14.9763 8.88543 14.0381C9.86315 13.0998 10.4402 11.8199 10.496 10.466L10.5 10.25V9.75C10.5 9.55109 10.579 9.36032 10.7197 9.21967C10.8603 9.07902 11.0511 9 11.25 9V9ZM5 0C6.06087 0 7.07828 0.421427 7.82843 1.17157C8.57857 1.92172 9 2.93913 9 4V10C9 11.0609 8.57857 12.0783 7.82843 12.8284C7.07828 13.5786 6.06087 14 5 14C3.93913 14 2.92172 13.5786 2.17157 12.8284C1.42143 12.0783 1 11.0609 1 10V4C1 2.93913 1.42143 1.92172 2.17157 1.17157C2.92172 0.421427 3.93913 0 5 0V0ZM5 1.5C4.33696 1.5 3.70107 1.76339 3.23223 2.23223C2.76339 2.70107 2.5 3.33696 2.5 4V10C2.5 10.663 2.76339 11.2989 3.23223 11.7678C3.70107 12.2366 4.33696 12.5 5 12.5C5.66304 12.5 6.29893 12.2366 6.76777 11.7678C7.23661 11.2989 7.5 10.663 7.5 10V4C7.5 3.33696 7.23661 2.70107 6.76777 2.23223C6.29893 1.76339 5.66304 1.5 5 1.5V1.5Z"
                           fill="#0084FF"
                         />
-                      </svg>
+                      </svg> */}
                     </span>
                     <span className="virbe-plugin-1-MuiTouchRipple-root"></span>
                   </button>
@@ -75,8 +75,10 @@ class Home extends React.Component {
                 style={{ marginBottom: "0px", backgroundColor: "unset" }}
               >
                 <div className="chat-message-bubble-panel">
-                  <img src="./bot.png" alt="bot" />
                   <div className="chat-message-panel">
+                    <div className="bot">
+                      <img src="./bot.png" alt="bot" />
+                    </div>
                     <div className="answer">
                       <p className="chat-message-panel-answer">
                         Hi! I’m a virtual representation of Chris, the CEO at
@@ -93,47 +95,64 @@ class Home extends React.Component {
                     <ul className="chat-message-panel-ul">
                       <li className="chat-message-panel-li">asdfadsf</li>
                     </ul>
+
+                    <div className="video-panel">
+                      <div className="video-main">
+                        {/* <video>
+                          <src></src>
+                        </video> */}
+                        <img src="./answer-bot.png" alt="answer-bot" />
+                      </div>
+                      <div className="video-others">
+                        <img
+                          src="./answer-bot.png"
+                          alt="answer-bot"
+                          className="video-child"
+                        />
+
+                        <img
+                          src="./answer-bot.png"
+                          alt="answer-bot"
+                          className="video-child"
+                        />
+                        <img
+                          src="./answer-bot.png"
+                          alt="answer-bot"
+                          className="video-child"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
               <form className="chat-form">
                 <div className="chat-form-message">
-                  <div className="chat-form-message-input">
-                    <input
-                      aria-invalid="false"
-                      placeholder="Type your message"
-                      type="text"
-                      value={this.state.msgbox}
-                      onChange={this.onChangeMsgBox}
-                    />
-                    <span style={{}}>a</span>
-                  </div>
-                </div>
-                <div className="mic-recorder false">
-                  <button
-                    className="form-button"
-                    tabIndex={0}
-                    type="button"
-                    style={{ borderWidth: 0 }}
-                  >
-                    <span>
-                      <svg width="38" height="38">
-                        <g fill="none">
-                          <rect
-                            width="38"
-                            height="38"
-                            y="0.396"
-                            fill="#005FF4"
-                            rx="19"
-                          ></rect>
+                  <div className="chat-form-message-input-panel">
+                    <div className="input-icons">
+                      <span className="icon">
+                        <svg
+                          width="14"
+                          height="20"
+                          viewBox="0 0 14 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
                           <path
-                            fill="#FFF"
-                            d="M25.602 17.67L14.52 12.128a2.375 2.375 0 00-3.23 3.088l1.9 4.251a.838.838 0 010 .65l-1.9 4.25a2.375 2.375 0 002.17 3.341c.37-.003.735-.09 1.068-.253l11.083-5.542a2.375 2.375 0 000-4.243h-.008zm-.704 2.826l-11.083 5.542a.791.791 0 01-1.07-1.03l1.893-4.25c.024-.057.046-.115.063-.175h5.455a.792.792 0 000-1.583H14.7a1.583 1.583 0 00-.063-.174l-1.892-4.251a.792.792 0 011.069-1.03l11.083 5.542a.792.792 0 010 1.41z"
-                          ></path>
-                        </g>
-                      </svg>
-                    </span>
-                  </button>
+                            d="M13.25 9C13.4312 9.00001 13.6063 9.06564 13.7429 9.18477C13.8795 9.30389 13.9684 9.46845 13.993 9.648L14 9.75V10.25C14.0002 11.9536 13.3561 13.5942 12.1971 14.8428C11.0381 16.0914 9.44989 16.8556 7.751 16.982L7.75 19.25C7.74994 19.44 7.67776 19.6229 7.54803 19.7618C7.4183 19.9006 7.2407 19.9851 7.05112 19.998C6.86154 20.011 6.67411 19.9515 6.5267 19.8316C6.37929 19.7117 6.2829 19.5402 6.257 19.352L6.25 19.25V16.982C4.59152 16.8588 3.03687 16.1278 1.88421 14.929C0.73155 13.7302 0.0620134 12.148 0.00400019 10.486L0 10.25V9.75C5.82426e-05 9.55998 0.0722443 9.37706 0.201972 9.23821C0.331701 9.09936 0.509299 9.01493 0.69888 9.00197C0.888462 8.98902 1.07589 9.04852 1.2233 9.16843C1.37071 9.28835 1.4671 9.45975 1.493 9.648L1.5 9.75V10.25C1.49989 11.6051 2.02372 12.9077 2.96194 13.8854C3.90015 14.8632 5.18008 15.4402 6.534 15.496L6.75 15.5H7.25C8.60507 15.5001 9.9077 14.9763 10.8854 14.0381C11.8632 13.0998 12.4402 11.8199 12.496 10.466L12.5 10.25V9.75C12.5 9.55109 12.579 9.36032 12.7197 9.21967C12.8603 9.07902 13.0511 9 13.25 9ZM7 0C8.06087 0 9.07828 0.421427 9.82843 1.17157C10.5786 1.92172 11 2.93913 11 4V10C11 11.0609 10.5786 12.0783 9.82843 12.8284C9.07828 13.5786 8.06087 14 7 14C5.93913 14 4.92172 13.5786 4.17157 12.8284C3.42143 12.0783 3 11.0609 3 10V4C3 2.93913 3.42143 1.92172 4.17157 1.17157C4.92172 0.421427 5.93913 0 7 0ZM7 1.5C6.33696 1.5 5.70107 1.76339 5.23223 2.23223C4.76339 2.70107 4.5 3.33696 4.5 4V10C4.5 10.663 4.76339 11.2989 5.23223 11.7678C5.70107 12.2366 6.33696 12.5 7 12.5C7.66304 12.5 8.29893 12.2366 8.76777 11.7678C9.23661 11.2989 9.5 10.663 9.5 10V4C9.5 3.33696 9.23661 2.70107 8.76777 2.23223C8.29893 1.76339 7.66304 1.5 7 1.5Z"
+                            fill="#0084FF"
+                          />
+                        </svg>
+                      </span>
+                      <input
+                        className="input-field"
+                        type="text"
+                        aria-invalid="false"
+                        placeholder="Type your message"
+                        value={this.state.msgbox}
+                        onChange={this.onChangeMsgBox}
+                      />
+                    </div>
+                  </div>
                 </div>
               </form>
             </div>
