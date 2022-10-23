@@ -1,13 +1,45 @@
 import React from "react";
 
 class Home extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.loginClick = this.loginClick.bind(this);
+    this.loginClick();
+  }
+
   state = { msg_bot: "", msgbox: "" };
   onChangeMsgBox = (e) => {
     this.setState({ msgbox: e.target.value });
   };
+
+  loginClick(){
+   fetch("http://chatbot.raspberryai.tech/token", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ username: "Entreviable", password: "GH@55321aA" })
+   }).then(function(resp){
+
+   if(!resp.ok) 
+    throw Error("There was a problem in the login request")
+
+   if(resp.status === 401){
+    throw("Invalid credentials")
+   }
+   else if(resp.status === 400){
+    throw ("Invalid email or password format")
+   }
+
+   return resp.json()}).then(function(data){
+    localStorage.setItem("jwt-token", data.token);
+    console.log(localStorage.getItem("jwt-token"));
+   });
+  }
+
   render() {
     return (
       <React.Fragment>
+      <button onClick={this.loginClick}>Login</button>
         <div className="chat-bot">
           <div className="chat-bot-avatar">
             <div className="chat-bot-avatar-figure">
