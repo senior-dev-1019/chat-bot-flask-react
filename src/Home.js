@@ -4,7 +4,6 @@ class Home extends React.Component {
 
   constructor(props) {
     super(props);
-    this.loginClick = this.loginClick.bind(this);
     this.loginClick();
   }
 
@@ -14,7 +13,7 @@ class Home extends React.Component {
   };
 
   loginClick(){
-   fetch("http://chatbot.raspberryai.tech/token", {
+   fetch("https://chatbot.raspberryai.tech/token", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username: "Entreviable", password: "GH@55321aA" })
@@ -39,7 +38,6 @@ class Home extends React.Component {
   render() {
     return (
       <React.Fragment>
-      <button onClick={this.loginClick}>Login</button>
         <div className="chat-bot">
           <div className="chat-bot-avatar">
             <div className="chat-bot-avatar-figure">
