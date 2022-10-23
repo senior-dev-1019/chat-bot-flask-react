@@ -15,7 +15,7 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-        <div className="virbe-plugin-expanded">
+        <div className="virbe-plugin-expanded move-right">
           <div className="player-container">
             <div className="canvas-container">
               <img src="./chat-bot.jpg" alt="sds" />
@@ -98,30 +98,32 @@ class Home extends React.Component {
                   </div>
                 </div>
                 <div className="mic-recorder false">
-                  <button
-                    className="form-button"
-                    tabIndex={0}
-                    type="button"
-                    style={{ borderWidth: 0 }}
-                  >
-                    <span>
-                      <svg width="38" height="38">
-                        <g fill="none">
-                          <rect
-                            width="38"
-                            height="38"
-                            y="0.396"
-                            fill="#005FF4"
-                            rx="19"
-                          ></rect>
-                          <path
-                            fill="#FFF"
-                            d="M25.602 17.67L14.52 12.128a2.375 2.375 0 00-3.23 3.088l1.9 4.251a.838.838 0 010 .65l-1.9 4.25a2.375 2.375 0 002.17 3.341c.37-.003.735-.09 1.068-.253l11.083-5.542a2.375 2.375 0 000-4.243h-.008zm-.704 2.826l-11.083 5.542a.791.791 0 01-1.07-1.03l1.893-4.25c.024-.057.046-.115.063-.175h5.455a.792.792 0 000-1.583H14.7a1.583 1.583 0 00-.063-.174l-1.892-4.251a.792.792 0 011.069-1.03l11.083 5.542a.792.792 0 010 1.41z"
-                          ></path>
-                        </g>
-                      </svg>
-                    </span>
-                  </button>
+                  <a href="/answer">
+                    <button
+                      className="form-button"
+                      tabIndex={0}
+                      type="button"
+                      style={{ borderWidth: 0 }}
+                    >
+                      <span>
+                        <svg width="38" height="38">
+                          <g fill="none">
+                            <rect
+                              width="38"
+                              height="38"
+                              y="0.396"
+                              fill="#005FF4"
+                              rx="19"
+                            ></rect>
+                            <path
+                              fill="#FFF"
+                              d="M25.602 17.67L14.52 12.128a2.375 2.375 0 00-3.23 3.088l1.9 4.251a.838.838 0 010 .65l-1.9 4.25a2.375 2.375 0 002.17 3.341c.37-.003.735-.09 1.068-.253l11.083-5.542a2.375 2.375 0 000-4.243h-.008zm-.704 2.826l-11.083 5.542a.791.791 0 01-1.07-1.03l1.893-4.25c.024-.057.046-.115.063-.175h5.455a.792.792 0 000-1.583H14.7a1.583 1.583 0 00-.063-.174l-1.892-4.251a.792.792 0 011.069-1.03l11.083 5.542a.792.792 0 010 1.41z"
+                            ></path>
+                          </g>
+                        </svg>
+                      </span>
+                    </button>
+                  </a>
                 </div>
               </form>
             </div>
